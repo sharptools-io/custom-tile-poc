@@ -1,6 +1,6 @@
 <!-- README
     This is the simplified version using James's Spotify app to Auth. 
-    - Auth page https://spotify-demo-auth.glitch.me/
+    - Auth page https://spotify-demo-auth.sharptools.workers.dev/
     - Only need accessToken and refreshToken keys in Custom Tile.     
 -->
 <!-- Do not edit below -->
@@ -180,7 +180,7 @@ stio.ready().then(function(data){
 function getNewToken(){
   console.log("Refreshing token");
   return new Promise(function(resolve, reject){
-    axios.post(`https://spotify-demo-auth.glitch.me/token`,  
+    axios.post(`https://spotify-demo-auth.sharptools.workers.dev/token`,  
       {refreshToken: userSettings.refreshToken}, {}      
       ).then(function(res){
         console.log(res);
